@@ -1,0 +1,41 @@
+group 'com.nohelty'
+version '1.0-SNAPSHOT'
+
+buildscript {
+    ext.kotlin_version = "1.1.50"
+
+    repositories {
+        mavenCentral()
+        maven { url = "https://repo.spring.io/milestone" }
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.0.0.M3")
+    }
+}
+
+apply plugin: 'kotlin'
+
+repositories {
+    mavenCentral()
+    maven { url = "https://repo.spring.io/milestone" }
+}
+
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin_version"
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    compile "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
+    compile "org.springframework.boot:spring-boot-starter-web:2.0.0.M3"
+    compile "org.springframework.boot:spring-boot-starter-websocket:2.0.0.M3"
+    compile "org.springframework:spring-context:5.0.0.RELEASE"
+    compile "com.fasterxml.jackson.module:jackson-module-kotlin:2.9.1"
+    compile "com.h2database:h2:1.4.196"
+
+    compile "org.webjars:webjars-locator"
+    compile "org.webjars:sockjs-client:1.0.2"
+    compile "org.webjars:stomp-websocket:2.3.3"
+    compile "org.webjars:bootstrap:3.3.7"
+    compile "org.webjars:jquery:3.1.0"
+
+    testCompile "org.springframework.boot:spring-boot-starter-test:2.0.0.M3"
+}
