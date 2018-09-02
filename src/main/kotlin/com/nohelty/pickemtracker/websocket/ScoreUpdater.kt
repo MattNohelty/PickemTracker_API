@@ -9,9 +9,6 @@ import org.springframework.stereotype.Component
 
 const val updateIntervalSeconds:Long = 10
 
-/**
- * Created by Matt.Nohelty on 10/14/2017
- */
 @Component
 class ScheduledUpdatesOnTopic(
         val messagingTemplate: SimpMessagingTemplate,

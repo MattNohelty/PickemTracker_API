@@ -4,12 +4,6 @@ import com.nohelty.pickemtracker.domain.Game
 import com.nohelty.pickemtracker.enum.Team
 import org.springframework.stereotype.Repository
 
-/**
- * Created by Matt.Nohelty on 10/7/2017
- */
-/**
- * Get all users
- */
 @Repository
 class GameRepository {
 

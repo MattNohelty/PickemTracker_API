@@ -10,9 +10,6 @@ import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
-/**
- * Created by Matt.Nohelty on 9/23/2017
- */
 @RestController()
 @RequestMapping("/week/{year}/{week}/game")
 class GameWeekController(val gameRepository: GameRepository) {

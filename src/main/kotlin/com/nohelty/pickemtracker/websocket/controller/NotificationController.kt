@@ -6,9 +6,6 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestMethod
 
 
-/**
- * Created by Matt.Nohelty on 10/15/2017
- */
 @Controller
 class NotificationController(
         val messagingTemplate: SimpMessagingTemplate) {

@@ -5,9 +5,6 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration
 import org.springframework.context.annotation.ComponentScan
 import org.springframework.scheduling.annotation.EnableScheduling
 
-/**
- * Created by Matt.Nohelty on 9/23/2017
- */
 //@SpringBootApplication
 @EnableAutoConfiguration
 @EnableScheduling

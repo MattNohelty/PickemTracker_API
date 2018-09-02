@@ -7,9 +7,6 @@ import org.springframework.web.bind.annotation.ControllerAdvice
 import org.springframework.web.bind.annotation.ExceptionHandler
 import org.springframework.web.bind.annotation.ResponseBody
 
-/**
- * Created by Matt.Nohelty on 9/23/2017
- */
 @ControllerAdvice
 class ExceptionHandler: Throwable() {
 

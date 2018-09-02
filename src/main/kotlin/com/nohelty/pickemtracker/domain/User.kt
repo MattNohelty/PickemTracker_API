@@ -1,14 +1,14 @@
 package com.nohelty.pickemtracker.domain
 
+import com.nohelty.pickemtracker.enum.Role
 import java.time.Instant
 
-/**
- * Created by Matt.Nohelty on 9/23/2017
- */
 data class User (
     var id:Int?,
     val firstName:String,
     val lastName:String,
     val email:String,
-    val createdDate:Instant
+    val password:String,
+    var createdDate:Instant?,
+    val roles: MutableList<Role> = mutableListOf(Role.player)
 )

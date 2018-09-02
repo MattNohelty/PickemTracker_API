@@ -3,14 +3,8 @@ package com.nohelty.pickemtracker.controller
 import com.nohelty.pickemtracker.domain.User
 import com.nohelty.pickemtracker.exception.ResourceNotFoundException
 import com.nohelty.pickemtracker.repository.UserRepository
-import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.PathVariable
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.bind.annotation.*
 
-/**
- * Created by Matt.Nohelty on 9/23/2017
- */
 @RestController()
 @RequestMapping("/user")
 class UserController (val userRepository: UserRepository) {
@@ -29,5 +23,15 @@ class UserController (val userRepository: UserRepository) {
         else {
             throw ResourceNotFoundException(id, "User")
         }
+    }
+
+    @PostMapping
+    fun createUser(@RequestBody user:User) {
+        userRepository.createUser(user)
+    }
+
+    @PutMapping("{id}")
+    fun updateUser(@RequestBody user:User) {
+        userRepository.updateUser(user)
     }
 }
